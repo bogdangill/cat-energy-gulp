@@ -1,2 +1,17 @@
 mixin page-footer()
-  .page-footer footer
+  footer.page-footer
+  .logo
+    img(src='img/cat-energy-img/footer-logo.svg' alt='логотип')
+  ul.list
+    li.list__item.social
+      a.social__link.social__link--vk(href="https://vk.com" target="_blank")
+        span.visually-hidden мы вконтакте
+    li.list__item.social
+      a.social__link.social__link--in(href="https://www.instagram.com" target="_blank")
+        span.visually-hidden мы в инстаграме
+    li.list__item.social
+      a.social__link.social__link--fb(href="#")
+        span.visually-hidden мы в фейсбуке
+  .page-footer__author
+    span.text HTML Academy
+    a.link.page-footer__logo--academy(href="https://htmlacademy.ru/" target="_blank")
