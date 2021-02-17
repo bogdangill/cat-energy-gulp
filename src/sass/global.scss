@@ -54,9 +54,13 @@ html {
 }
 
 body {
-  font: 300 $fz $font-family;
+  font: 300 $fz-mobile $font-family;
   color: $text-color;
   margin: 0;
+
+  @media (min-width: $screen-md) {
+    font-size: $fz;
+  }
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
