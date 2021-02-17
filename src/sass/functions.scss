@@ -16,3 +16,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+// my mixins
+
+@mixin bg-center($bg-size) {
+  background-size: $bg-size;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
