@@ -12,17 +12,62 @@
 @import "fonts";
 @import "global";
 
-@import "../blocks/components/btn/btn";
-
 @import "../blocks/project/page-header/page-header";
 @import "../blocks/project/page-footer/page-footer";
 @import "../blocks/project/order-page/order-page";
 
 // My styles
 
-// basic styles
+// ========================== BASIC STYLES =============================== //
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+@media (min-width: $screen-md) {
+    $fz: 16px;   
+}
+
+.title {
+    font-size: 2.57rem;
+    line-height: 1em;
+    font-weight: 400;
+    color: black;
+
+    &--sub {
+        font-size: 1.71rem;
+        line-height: 1.54em;
+        text-transform: uppercase;
+    }
+}
+
+.text {
+    font-family: 'Arial', sans-serif;
+    line-height: 18px;
+
+    @media (min-width: $screen-md) {
+        line-height: 24px;
+    }
+}
+
+.link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.uppertext {
+    color: black;
+    text-transform: uppercase;
+}
+
+.btn {
+    display: inline-block;
+    line-height: 18px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding: .5rem 0;
+    background-color: $basic-green;
+    width: 100%;
+}
 
 .logo {
     display: inline-block;
