@@ -12,6 +12,14 @@ $gray-lighter:                hsl(0, 0%, 80%);
 $gray-lightest:               hsl(0, 0%, 90%);
 $white:                       hsl(0, 0%, 100%);
 
+// Цвета с макета Cat Energy
+
+$basic-green:                 hsl(97, 53%, 47%);
+$basic-grey:                  hsl(0, 0%, 95%);
+$darker-grey:                 hsl(0, 0%, 80%);
+$darkest-grey:                hsl(0, 0%, 40%);
+$blackened-grey:              hsl(0, 0%, 27%);
+
 // Семантические цвета
 
 $color-main:                  hsl(208, 98%, 43%);
@@ -32,7 +40,7 @@ $fz--h5:                      1em;
 $fz--h6:                      1em;
 $fz--small:                   0.75em;
 
-$font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-family:                 'Oswald',-apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 $font-family--monospace:     SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 
 // Ширины
