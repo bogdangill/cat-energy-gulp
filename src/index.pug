@@ -9,15 +9,15 @@ block content
     section.promo
       .container
         .promo__content
-          h1.title.promo__title.title--prima Функциональное питание для котов
-          p.text.text--upper Занялся собой? Займись котом!
+          h1.title.promo__title Функциональное питание для котов
+          p.uppertext.promo__uppertext Занялся собой? Займись котом!
           img.promo__image(src='img/cat-energy-img/index-can.png' alt='продукция cat energy pro курица')
-          a.btn.promo__btn(href="#") подобрать программу
+          a.link.btn.promo__btn(href="#") подобрать программу
       .promo__background
         .promo__bg-image
           .promo__bg-mask
     section.goal
-      h2.title.title--hidden Цель
+      h2.title(hidden) Цель
       .container
         .goal-card
           .icon-container.goal-card__icon-container.icon-container--green--round
@@ -27,7 +27,7 @@ block content
             | Ваш кот весит больше собаки и почти утратил способность 
             | лазить по деревьям? Пора на диету! Cat Energy Slim поможет 
             | вашему питомцу сбросить лишний вес.
-          a.link.text.text--upper(href='#') каталог slim
+          a.link.uppertext(href='#') каталог slim
             span.link__icon--arrow →
         .goal-card
           .icon-container.goal-card__icon-container.icon-container--green--round
@@ -37,7 +37,7 @@ block content
             | Заработать авторитет среди дворовых котов и даже собак?
             | Серия Cat Energy Pro поможет вашему коту нарастить 
             | необходимые мышцы!
-          a.link.text.text--upper(href='#') каталог pro
+          a.link.uppertext(href='#') каталог pro
             span.link__icon--arrow →
     section.advantages
       .container
@@ -67,26 +67,26 @@ block content
             | привычек и по-прежнему спит по 16 часов в день.
           ul.list.demonstration__numbers
             li.list__item
-              span.number 5 КГ
+              span.uppertext 5 КГ
             li.list__item
-              span.number 60 ДНЕЙ
+              span.uppertext 60 ДНЕЙ
           .demonstration__expenses-container
-            span.text.text--upper Затраты на питание: 
-            span.text.text--upper 15 000 РУБ. 
+            span.uppertext Затраты на питание: 
+            span.uppertext 15 000 РУБ. 
         .demonstration__interactive
           .slider
             .slider__slide.slider__slide--left-side
             .slider__slide.slider__slide--right-side
             .slider__control-box
-              span.text.text--upper.slider__control-text было
+              span.uppertext.slider__control-text было
               input.slider__control(type="range" min="1" max="30" step="1")
-              span.text.text--upper.slider__control-text стало
+              span.uppertext.slider__control-text стало
       .demonstration__bg-mask
     section.contacts
       //пусть пока фоновой пикчей будет
       .contacts__map
       .contacts__address
-        p.text.text--upper приглашаем к сотрудничеству дилеров!
+        p.uppertext приглашаем к сотрудничеству дилеров!
         p.contacts__item ул. Большая Конюшенная, д. 19/8
         p.contacts__item Санкт-Петербург
 block footer
