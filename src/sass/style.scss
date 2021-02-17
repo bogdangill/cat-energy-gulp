@@ -3,7 +3,7 @@
 
 // @import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
 
-// My style
+// Default styles
 
 @import "grid-mixins";
 
@@ -17,3 +17,27 @@
 @import "../blocks/project/page-header/page-header";
 @import "../blocks/project/page-footer/page-footer";
 @import "../blocks/project/order-page/order-page";
+
+// My styles
+
+// basic styles
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.logo {
+    display: inline-block;
+    height: 40px;
+    width: 100%;
+    background-image: url('../img/cat-energy-img/logo-mobile.svg');
+    @include bg-center(contain);
+
+    @media(min-width: $screen-md) {
+        height: 52px;
+        background-image: url('../img/cat-energy-img/logo-tablet.svg');
+    }
+
+    @media(min-width: $screen-lg) {
+        height: 60px;
+        background-image: url('../img/cat-energy-img/logo-desktop.svg');
+    }
+}
