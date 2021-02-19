@@ -1,8 +1,6 @@
 mixin page-header()
   header.page-header
-  a.logo(href="#")
-  nav.page-header__menu
-    ul.list
-      li.list__item.list__item--menu главная
-      li.list__item.list__item--menu каталог продукции
-      li.list__item.list__item--menu подбор программы
+    a.logo(href="#")
+    img.logo-mobile-text(src="img/cat-energy-img/logo-mobile-text.svg" alt="cat energy logo")
+    block main-nav
+      +main-nav('0')
