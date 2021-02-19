@@ -24,11 +24,13 @@ $transition-time:             0.3s !default;
   $block-name:                &; // #{$block-name}__element
 
   text-transform: uppercase;
-  position: relative;
   z-index: 10;
 
   // первый уровень
   &__list {
+    position: absolute;
+    top: 100%;
+    left: 15px;
     color: black;
     margin: 0;
     padding: 0;
@@ -162,10 +164,16 @@ $transition-time:             0.3s !default;
   // переключатель
 
   &__toggler {
-    display: inline-block;
     padding: 0;
     background: none;
     border: none;
+
+    &:focus {
+      outline: none;
+      height: 2rem;
+      border: 1px solid $basic-green;
+      border-radius: 5px;
+    }
 
     .no-js & {
       display: none;

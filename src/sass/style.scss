@@ -12,6 +12,10 @@
 @import "fonts";
 @import "global";
 
+@import "../blocks/components/burger/burger.scss";
+@import "../blocks/components/main-nav/main-nav.scss";
+@import "../blocks/components/menu/menu.scss";
+
 @import "../blocks/project/page-header/page-header";
 @import "../blocks/project/page-footer/page-footer";
 @import "../blocks/project/order-page/order-page";
@@ -71,18 +75,43 @@
 
 .logo {
     display: inline-block;
-    height: 40px;
-    width: 100%;
+    height: 2.85em;
+    width: 2.42em;
     background-image: url('../img/cat-energy-img/logo-mobile.svg');
     @include bg-center(contain);
 
     @media(min-width: $screen-md) {
-        height: 52px;
+        width: 10.9em;
         background-image: url('../img/cat-energy-img/logo-tablet.svg');
     }
 
     @media(min-width: $screen-lg) {
-        height: 60px;
         background-image: url('../img/cat-energy-img/logo-desktop.svg');
     }
+
+    &-mobile-text {
+        @media (min-width: $screen-md) {
+            display: none;
+        }
+    }
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+// ========================== PAGE-HEADER =============================== //
+
+.page-header {
+    @include container();
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: .78em;
+    padding-bottom: .78em; 
 }
