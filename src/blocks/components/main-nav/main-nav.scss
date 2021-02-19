@@ -11,6 +11,8 @@ $screen-lg:                   992px !default;
 $screen-xl:                   1200px !default;
 $screen-xxl:                  1800px !default;
 
+// @bogdangill: добавил новую переменную для смены сценария отображения меню(настольный вид списка уже на планшете // а не только на десктопе - подгоняю под макет)
+$menu-tablet-width:           $screen-md;
 $menu-desktop-width:          $screen-lg !default;
 $toggler-part-height:         3px !default;
 $toggler-part-bg-color:       #000 !default;
@@ -21,17 +23,19 @@ $transition-time:             0.3s !default;
 
   $block-name:                &; // #{$block-name}__element
 
+  text-transform: uppercase;
   position: relative;
   z-index: 10;
 
   // первый уровень
   &__list {
+    color: black;
     margin: 0;
     padding: 0;
     list-style: none;
 
     // мобильный вид списка
-    @media (max-width: ($menu-desktop-width - 1)) {
+    @media (max-width: ($menu-tablet-width - 1)) {
 
       // открытие/закрытие меню только в случае работающего JS
 
@@ -48,7 +52,7 @@ $transition-time:             0.3s !default;
     }
 
     // настольный вид списка
-    @media (min-width: $menu-desktop-width) {
+    @media (min-width: $menu-tablet-width) {
       display: flex;
       flex-wrap: wrap;
 
@@ -68,33 +72,37 @@ $transition-time:             0.3s !default;
     &--active {
 
       & > #{$block-name}__link {
-        color: #000;
+        opacity: 1;
+        border-bottom: 2px solid $basic-green;
       }
     }
   }
 
   &__link {
     display: block;
-    padding: 0.5em 1em;
+    color: inherit;
+    padding: .7em 0;
     text-decoration: none;
-    background-color: #fff;
 
     &:hover,
     &:focus {
-      text-decoration: none;
-      background-color: $gray-lightest;
+      opacity: .7;
+    }
+
+    &:active {
+      opacity: .3;
     }
 
     &--lvl-2 {
 
-      @media (max-width: ($menu-desktop-width - 1)) {
+      @media (max-width: ($menu-tablet-width - 1)) {
         padding-left: 1.2em;
       }
     }
 
     &--lvl-3 {
 
-      @media (max-width: ($menu-desktop-width - 1)) {
+      @media (max-width: ($menu-tablet-width - 1)) {
         padding-left: 2.4em;
       }
     }
@@ -104,7 +112,7 @@ $transition-time:             0.3s !default;
 
     &--lvl-2 {
 
-      @media (min-width: $menu-desktop-width) {
+      @media (min-width: $menu-tablet-width) {
         position: absolute;
         top: 100%;
         left: 0;
@@ -127,7 +135,7 @@ $transition-time:             0.3s !default;
 
     &--lvl-3 {
 
-      @media (min-width: $menu-desktop-width) {
+      @media (min-width: $menu-tablet-width) {
         position: absolute;
         z-index: 1;
         top: 0;
@@ -163,7 +171,7 @@ $transition-time:             0.3s !default;
       display: none;
     }
 
-    @media (min-width: $menu-desktop-width) {
+    @media (min-width: $menu-tablet-width) {
       display: none;
     }
   }
