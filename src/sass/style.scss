@@ -31,16 +31,10 @@
 }
 
 .title {
-    font-size: 2.57rem;
+    font-size: 2.5rem;
     line-height: 1em;
     font-weight: 400;
     color: inherit;
-
-    &--sub {
-        font-size: 1.71rem;
-        line-height: 1.54em;
-        text-transform: uppercase;
-    }
 }
 
 .text {
@@ -55,6 +49,10 @@
 .link {
     color: inherit;
     text-decoration: none;
+
+    &__icon {
+        margin-left: 1.3em;
+    }
 }
 
 .uppertext {
@@ -77,7 +75,7 @@
     height: 2.85em;
     width: 2.42em;
     background-image: url('../img/cat-energy-img/logo-mobile.svg');
-    @include bg-center(contain);
+    @include makeBgCenter(contain);
 
     @media(min-width: $screen-md) {
         width: 10.9em;
@@ -99,6 +97,37 @@
     display: flex;
     flex-wrap: wrap;
     @include ul-none();
+}
+
+.icon-container {
+    position: relative;
+    background-color: $basic-green;
+
+    &__icon {
+        position: absolute;
+
+        &--slim {
+            bottom: 5%;
+            @include makeSqr(100%);
+        }
+
+        &--pro {
+            max-width: 130%;
+            top: 25%;
+            right: -10%;
+
+            @media (min-width: $screen-md) {
+                top: 23%;
+                right: -17%;
+                width: 268px;
+                max-width: 268px;
+            }
+        }
+    }
+
+    &--round {
+        border-radius: 100%;
+    }
 }
 
 // ========================== PAGE-HEADER =============================== //
@@ -154,8 +183,84 @@
 
     &__bg-mask {
         position: absolute;
-        @include fullscaled();
+        @include makeFullscaled();
         background-color: $basic-green;
         opacity: .85;
+    }
+}
+
+// ========================== GOAL =============================== //
+
+.goal {
+    @include container();
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &__row {
+        @include row();
+    }
+
+    &__col {
+        @include make-col(12);
+    }
+    
+    &__card {
+        margin: 10px 0;
+    }
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 6.9%;
+    background-color: $basic-grey;
+
+    &__title {
+        font-size: 1.71rem;
+        line-height: 2em;
+        margin-bottom: 0;
+        text-transform: uppercase;
+
+        @media (min-width: $screen-md) and (max-width: $screen-lg) {
+            line-height: 1em;
+        }
+    }
+
+    &__text {
+        padding: 1.42em 0;
+    }
+
+    &__icon-container {
+        @include makeSqr(50px);
+        margin-right: 20px;
+
+        @media (min-width: $screen-md) {
+            float: right;
+            margin-right: 10px;
+            @include makeSqr(200px);
+        }
+    }
+
+    &__uppertext {
+        display: flex;
+        align-items: center;
+        color: black;
+        line-height: 1em;
+    }
+
+    @media (min-width: $screen-md) {
+        display: block;
+    }
+
+    @media (max-width: $screen-md) {
+        &__text {
+            border-bottom: 1px solid #d9d9d9;
+        }
+    }
+
+    @media (min-width: $screen-md) {
+        &__text {
+            max-width: 377px;
+        }
     }
 }
