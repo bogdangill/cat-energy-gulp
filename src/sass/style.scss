@@ -34,7 +34,7 @@
     font-size: 2.57rem;
     line-height: 1em;
     font-weight: 400;
-    color: black;
+    color: inherit;
 
     &--sub {
         font-size: 1.71rem;
@@ -58,7 +58,6 @@
 }
 
 .uppertext {
-    color: black;
     text-transform: uppercase;
 }
 
@@ -99,9 +98,7 @@
 .list {
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    @include ul-none();
 }
 
 // ========================== PAGE-HEADER =============================== //
@@ -114,4 +111,51 @@
     align-items: center;
     padding-top: .78em;
     padding-bottom: .78em; 
+}
+
+// ========================== PROMO =============================== //
+
+.promo {
+    position: relative;
+
+    &__content {
+        @include container();
+        color: white;
+        text-align: center;
+    }
+
+    &__title {
+        padding-top: .75em;
+        transition: $transition-time;
+    }
+
+    &__uppertext {
+        margin-bottom: 2.14em;
+        transition: $transition-time;
+    }
+
+    &__background {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 70%;
+        z-index: -1;
+    }
+
+    &__bg-image {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/cat-energy-img/index-bg-desktop.jpg');
+        background-size: 175%;
+        background-position: 65%;
+        background-repeat: no-repeat;
+    }
+
+    &__bg-mask {
+        position: absolute;
+        @include fullscaled();
+        background-color: $basic-green;
+        opacity: .85;
+    }
 }
