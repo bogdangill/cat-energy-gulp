@@ -11,6 +11,29 @@ import '../blocks/components/dropdown/dropdown.js';
 var tagHtml = document.querySelector('html');
 tagHtml.classList.add('js');
 
+// скрытие контента в промосекции при показе меню на мобильнике
+
+var burger = document.querySelector('.burger');
+
+function hideElements() {
+  var triggeringSection = document.getElementById('trigger');
+  var elemsToHide = triggeringSection.querySelectorAll('*:nth-child(-n+2)');
+
+  if (burger.classList.contains('burger--close')) {
+    for (var elemToHide of elemsToHide) {
+      elemToHide.style.opacity = '1';
+    }
+  } else {
+    for (var elemToHide of elemsToHide) {
+      elemToHide.style.opacity= '0';
+    }
+  }
+}
+
+burger.addEventListener('click', hideElements);
+
+// скрытие контента в промосекции при показе меню на мобильнике
+
 // Если js включен в браузере
 
 // Плавный скол с навигации
