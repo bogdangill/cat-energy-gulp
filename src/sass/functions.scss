@@ -19,13 +19,23 @@
 
 // my mixins
 
-@mixin bg-center($bg-size) {
+@mixin makeBgCenter($bg-size) {
   background-size: $bg-size;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
 
-@mixin fullscaled() {
+@mixin makeFullscaled() {
   width: 100%;
   height: 100%;
+}
+
+@mixin makeSize($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin makeSqr($sqrSize) {
+  width: $sqrSize;
+  height: $sqrSize;
 }
