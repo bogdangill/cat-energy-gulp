@@ -24,3 +24,8 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
+
+@mixin fullscaled() {
+  width: 100%;
+  height: 100%;
+}
