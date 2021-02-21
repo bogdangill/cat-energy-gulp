@@ -14,11 +14,11 @@ $white:                       hsl(0, 0%, 100%);
 
 // Цвета с макета Cat Energy
 
-$basic-green:                 hsl(97, 53%, 47%);
-$basic-grey:                  hsl(0, 0%, 95%);
-$darker-grey:                 hsl(0, 0%, 80%);
-$darkest-grey:                hsl(0, 0%, 40%);
-$blackened-grey:              hsl(0, 0%, 27%);
+$green-basic:                 hsl(97, 53%, 47%);
+$grey-basic:                  hsl(0, 0%, 95%);
+$grey-darker:                 hsl(0, 0%, 80%);
+$grey-darkest:                hsl(0, 0%, 40%);
+$grey-blackened:              hsl(0, 0%, 27%);
 
 // Семантические цвета
 
@@ -27,7 +27,7 @@ $color-success:               hsl(120, 39%, 54%);
 $color-danger:                hsl(2, 64%, 58%);
 $color-warning:               hsl(35, 84%, 62%);
 
-$text-color:                  $blackened-grey;
+$text-color:                  $grey-blackened;
 
 // Базовая типографика
 

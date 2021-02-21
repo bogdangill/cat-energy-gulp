@@ -68,7 +68,7 @@
     text-transform: uppercase;
     text-align: center;
     padding: .5rem 0;
-    background-color: $basic-green;
+    background-color: $green-basic;
     width: 100%;
 }
 
@@ -103,7 +103,7 @@
 
 .icon-container {
     position: relative;
-    background-color: $basic-green;
+    background-color: $green-basic;
 
     &__icon {
         position: absolute;
@@ -202,7 +202,7 @@
     &__bg-mask {
         position: absolute;
         @include makeFullscaled();
-        background-color: $basic-green;
+        background-color: $green-basic;
         opacity: .85;
     }
 }
@@ -231,7 +231,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: $offset-mobile;
-    background-color: $basic-grey;
+    background-color: $grey-basic;
 
     &__title {
         font-size: 1.5rem;
@@ -321,5 +321,13 @@
         @media (min-width: $screen-md) {
             @include col(md, 6);
         }
+    }
+}
+
+// ========================== DEMONSTRATION =============================== //
+
+.demonstration {
+    &__wrapper {
+        background-color: #EAEAEA;
     }
 }

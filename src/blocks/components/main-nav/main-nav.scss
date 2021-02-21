@@ -80,7 +80,7 @@ $transition-time:             0.3s !default;
         border-bottom: 2px solid white;
 
         @media (min-width: $screen-md) {
-          border-bottom-color: $basic-green;
+          border-bottom-color: $green-basic;
         }
       }
     }
@@ -177,7 +177,7 @@ $transition-time:             0.3s !default;
     &:focus {
       outline: none;
       height: 2rem;
-      border: 1px solid $basic-green;
+      border: 1px solid $green-basic;
       border-radius: 5px;
     }
 
