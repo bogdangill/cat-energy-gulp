@@ -34,7 +34,7 @@
     font-size: 2.5rem;
     line-height: 1em;
     font-weight: 400;
-    padding: $offset-mobile 0;
+    padding-bottom: $offset-mobile;
     margin: 0;
     color: inherit;
 }
@@ -289,10 +289,6 @@
     @include container();
     padding-top: 10px;
     padding-bottom: 10px;
-
-    &__title {
-        padding-top: 0;
-    }
 
     &__item {
         display: flex;
