@@ -39,3 +39,21 @@
   width: $sqrSize;
   height: $sqrSize;
 }
+
+@mixin makeThumb($width, $height, $bRad, $bgColor) {
+  width: $width;
+  height: $height;
+  border-radius: $bRad;
+  background-color: $bgColor;
+  cursor: pointer;
+}
+
+@mixin makeTrack($height, $bgColor, $bRad, $bColor, $paddY, $paddX) {
+  box-sizing: border-box;
+  height: $height;
+  cursor: pointer;
+  background: $bgColor;
+  border-radius: $bRad;
+  border: 1px solid $bColor;
+  padding: $paddY $paddX;
+}
