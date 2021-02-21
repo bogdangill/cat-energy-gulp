@@ -62,28 +62,31 @@ block content
             p.text.advantages__text Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
     section.demonstration
       .demonstration__wrapper
-        h2.title Живой пример
-        .demonstration__content
-          p.text 
-            | Борис сбросил 5 кг за 2 месяца, просто заменив свой 
-            | обычный корм на Cat Energy Slim. Отличный результат 
-            | без изнуряющих тренировок! При этом он не менял своих 
-            | привычек и по-прежнему спит по 16 часов в день.
-          ul.list.demonstration__numbers
-            li.list__item
-              span.uppertext 5 КГ
-            li.list__item
-              span.uppertext 60 ДНЕЙ
-          .demonstration__expenses-container
+        h2.title.demonstration__title Живой пример
+        p.text.demonstration__text 
+          | Борис сбросил 5 кг за 2 месяца, просто заменив свой 
+          | обычный корм на Cat Energy Slim. Отличный результат 
+          | без изнуряющих тренировок! При этом он не менял своих 
+          | привычек и по-прежнему спит по 16 часов в день.
+        .numbers
+          .numbers__cards
+            fieldset.numbers__item
+              span.uppertext.numbers__number 5 КГ
+              legend.text.numbers__text снижение веса
+            fieldset.numbers__item
+              span.uppertext.numbers__number 60 ДНЕЙ
+              legend.text.numbers__text затрачено времени
+          .numbers__expenses-container
             span.uppertext Затраты на питание: 
             span.uppertext 15 000 РУБ. 
         .demonstration__interactive
           .slider
-            .slider__slide.slider__slide--left-side
-            .slider__slide.slider__slide--right-side
+            .slider__inner
+              .slider__slide.slider__slide--left-side
+              .slider__slide.slider__slide--right-side
             .slider__control-box
               span.uppertext.slider__control-text было
-              input.slider__control(type="range" min="1" max="30" step="1")
+              input.slider__control(type="range" min="1" max="2" step="1")
               span.uppertext.slider__control-text стало
     section.contacts
       //пусть пока фоновой пикчей будет

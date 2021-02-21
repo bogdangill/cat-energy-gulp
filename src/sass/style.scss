@@ -34,9 +34,8 @@
     font-size: 2.5rem;
     line-height: 1em;
     font-weight: 400;
-    padding-bottom: $offset-mobile;
     margin: 0;
-    color: inherit;
+    color: black;
 }
 
 .text {
@@ -172,13 +171,19 @@
     }
 
     &__title {
-        padding-top: .75em;
+        color: white;
+        padding-top: $offset-mobile-y;
         transition: $transition-time;
     }
 
     &__uppertext {
-        margin-bottom: 2.14em;
+        margin-top: $offset-mobile-y;
+        margin-bottom: 0;
         transition: $transition-time;
+    }
+
+    &__image {
+        margin-top: $offset-mobile-y;
     }
 
     &__background {
@@ -211,8 +216,7 @@
 
 .goal {
     @include container();
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
 
     &__row {
         @include row();
@@ -220,10 +224,11 @@
 
     &__col {
         @include make-col(12);
-    }
-    
-    &__card {
-        margin: 10px 0;
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -287,14 +292,13 @@
 
 .advantages {
     @include container();
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: $offset-mobile-y;
+    padding-bottom: 20px;
 
     &__item {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        margin-bottom: $offset-mobile;
     }
 
     &__icon-container {
@@ -311,12 +315,13 @@
 
     &__row {
         @include row();
-        margin-top: $offset-mobile;
-        margin-bottom: $offset-mobile;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     &__col {
         @include col(xs, 12);
+        margin-top: 20px;
 
         @media (min-width: $screen-md) {
             @include col(md, 6);
@@ -327,7 +332,125 @@
 // ========================== DEMONSTRATION =============================== //
 
 .demonstration {
+    background-color: #EAEAEA;
+
     &__wrapper {
-        background-color: #EAEAEA;
+        @include container();
+        padding-top: $offset-mobile-y;
+        padding-bottom: $offset-mobile-y;
+    }
+
+    &__text {
+        margin-top: $offset-mobile-y;
+    }
+}
+
+.numbers {
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        flex-basis: 44.64%;
+        border: 1px solid $grey-darker;
+        border-radius: 3px;
+        transform: rotateX(180deg);
+    }
+
+    &__number {
+        font-size: 1.5rem;
+        line-height: 1em;
+        color: black;
+        padding-top: 15px;
+        transform: rotateX(180deg);
+    }
+
+    &__text {
+        font-size: 13px;
+        line-height: 1em;
+        text-align: center;
+        max-width: 69.6%;
+        transform: rotateX(180deg);
+    }
+
+    &__expenses-container {
+        display: flex;
+        justify-content: center;
+        color: black;
+        white-space: pre-wrap;
+        margin: $offset-mobile-y 0;
+    }
+}
+
+input[type='range'] {
+    width: 85px;
+}
+
+.slider {
+    &__inner {
+        position: relative;
+        width: 100%;
+        height: 72.5vw;
+    }
+
+    &__slide {
+        position: absolute;
+        @include makeFullscaled();
+        @include makeBgCenter(cover);
+
+        &--left-side {
+            background-image: url('../img/cat-energy-img/cat-fat.png');
+        }
+    }
+
+    &__control-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        margin-top: $offset-mobile-y;
+    }
+
+    &__control {
+        margin: 0 $offset-mobile / 2;
+
+        // стили для ползунка контрола
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            @include makeThumb(35px, 6px, 6px, $green-basic);
+        }
+
+        &::-moz-range-thumb {
+            @include makeThumb(35px, 6px, 6px, $green-basic);
+        }
+
+        &::-ms-thumb {
+            @include makeThumb(35px, 6px, 6px, $green-basic);
+        }
+
+        // стили для трека, по которому гоняют ползуна
+
+        &::-webkit-slider-runnable-track {
+            @include makeTrack(14px, white, 6px, $grey-darker, 3px, 6px);
+        }
+
+        &::-moz-range-track {
+            @include makeTrack(14px, white, 6px, $grey-darker, 3px, 6px);
+        }
+
+        &::-ms-track {
+            box-sizing: border-box;
+            height: 14px;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            border-width: 16px 0;
+            color: transparent;
+        }
     }
 }
