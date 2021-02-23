@@ -90,10 +90,12 @@ block content
               span.uppertext.slider__control-text стало
     section.contacts
       //пусть пока фоновой пикчей будет
+      .contacts__inner
+        p.uppertext.contacts__uppertext приглашаем к сотрудничеству дилеров!
+        .contacts__address
+          p.text.contacts__text ул. Большая Конюшенная, д. 19/8
+          p.text.contacts__text Санкт-Петербург
       .contacts__map
-      .contacts__address
-        p.uppertext приглашаем к сотрудничеству дилеров!
-        p.contacts__item ул. Большая Конюшенная, д. 19/8
-        p.contacts__item Санкт-Петербург
+        .contacts__balloon
 block footer
   +page-footer()
