@@ -34,6 +34,28 @@ burger.addEventListener('click', hideElements);
 
 // скрытие контента в промосекции при показе меню на мобильнике
 
+// слайдер "было-стало" (сценарий пока только для мобильника)
+
+var controller = document.querySelector('.slider__control');
+var catBefore = document.querySelector('.slider__slide-wrapper--left-side');
+var catAfter = document.querySelector('.slider__slide-wrapper--right-side');
+
+controller.onchange = function() {
+  var catBeforeWidth = parseInt(catBefore.style.width);
+  var catAfterWidth = parseInt(catAfter.style.width);
+
+  if (controller.value > 0) {
+    catAfter.style.width = controller.value + '%';
+    var catBeforeChanged = catBeforeWidth - controller.value;
+    catBefore.style.width = catBeforeChanged + '%';
+  } else {
+    catAfter.style.width = controller.value + '%';
+    var catBeforeChanged = 100;
+    catBefore.style.width = catBeforeChanged + '%';
+  }
+}
+// слайдер "было-стало"
+
 // Если js включен в браузере
 
 // Плавный скол с навигации

@@ -416,13 +416,35 @@ input[type='range'] {
         height: 72.5vw;
     }
 
-    &__slide {
+    &__slide-wrapper {
         position: absolute;
-        @include makeFullscaled();
-        @include makeBgCenter(cover);
+        height: 100%;
+        overflow: hidden;
+        transition: $transition-time;
+        // @include makeBgCenter(contain);
 
         &--left-side {
+            color: #d9d9d9;
+            // background-image: url('../img/cat-energy-img/cat-fat.png');
+        }
+
+        &--right-side {
+            color: #EAEAEA;
+            // background-image: url('../img/cat-energy-img/cat-skinny.png');
+        }
+    }
+
+    &__slide {
+        @include makeBgCenter(contain);
+        width: calc(100vw - 40px);
+        height: 100%;
+
+        &--left {
             background-image: url('../img/cat-energy-img/cat-fat.png');
+        }
+
+        &--right {
+            background-image: url('../img/cat-energy-img/cat-skinny.png');
         }
     }
 
