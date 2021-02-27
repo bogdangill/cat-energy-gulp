@@ -96,7 +96,8 @@ $transition-time:             0.3s !default;
   &__link {
     display: block;
     color: inherit;
-    padding: .7em 0;
+    line-height: 1em;
+    padding: 10px 0;
     text-decoration: none;
 
     &:hover,
