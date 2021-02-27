@@ -55,11 +55,13 @@ html {
 
 body {
   font: 300 $fz-mobile $font-family;
+  line-height: 18px;
   color: $text-color;
   margin: 0;
 
   @media (min-width: $screen-md) {
     font-size: $fz;
+    line-height: 24px;
   }
 
   -webkit-font-smoothing: antialiased;
